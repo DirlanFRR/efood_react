@@ -1,8 +1,9 @@
-import Hero from '../../components/Hero'
+import HeaderHome from '../../components/Hero'
 import RestaurantsList from '../../components/RestaurantsList'
 import restaurant from '../../Model/restaurant'
-import sushiRest from '../assets/images/sushi.svg'
-import pastaRest from '../assets/images/pasta.svg'
+
+import sushiRest from '../../assets/images/sushi.svg'
+import pastaRest from '../../assets/images/pasta.svg'
 
 const destaque: restaurant[] = [
   {
@@ -63,7 +64,7 @@ const destaque: restaurant[] = [
 
 const Home = () => (
   <>
-    <Hero />
+    <HeaderHome />
     <RestaurantsList restaurants={destaque} />
   </>
 )
