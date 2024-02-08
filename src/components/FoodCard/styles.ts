@@ -19,6 +19,7 @@ export const Card = styled.li`
   h2 {
     font-size: 16px;
     font-weight: 900;
+    height: 19px;
   }
 
   p {
