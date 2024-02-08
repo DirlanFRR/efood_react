@@ -6,6 +6,7 @@ export const Card = styled.div`
   border: 1px solid ${cores.vermelhoCoral};
   width: 472px;
   position: relative;
+  column-gap: 80px;
 
   img {
     width: 100%;

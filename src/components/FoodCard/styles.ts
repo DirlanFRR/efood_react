@@ -25,6 +25,7 @@ export const Card = styled.li`
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    margin-bottom: 8px;
   }
 
   button {
@@ -32,8 +33,10 @@ export const Card = styled.li`
     color: ${cores.vermelhoCoral};
     border: none;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
     padding: 4px 0;
     cursor: pointer;
+    width: 304px;
+    height: 24px;
   }
 `
