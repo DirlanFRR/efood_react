@@ -1,15 +1,16 @@
-import { Header, HeaderContent } from '../../components/PerfilHeader/styles'
+import { Header, HeaderContent } from './styles'
 
 import bannerImg from '../../assets/images/Vector.svg'
 import logo from '../../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
 
 const PerfilHeader = () => (
   <Header style={{ backgroundImage: `url(${bannerImg})` }}>
     <HeaderContent className="container">
-      <a href="/">Restaurantes</a>
+      <Link to="/">Restaurantes</Link>
       <img src={logo} alt="efood logo" />
       <p>
-        <span style={{ marginRight: '8px' }}> 0 </span> produto(s) no carrinho
+        <span>0</span>&nbsp; produto(s) no carrinho
       </p>
     </HeaderContent>
   </Header>

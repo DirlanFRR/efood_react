@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Tag from '../Tag'
 import {
   Card,
@@ -8,7 +10,7 @@ import {
   RestaurantTag
 } from './styles'
 
-import starImg from '../../assets/icons/estrela.svg'
+import starImg from '../../assets/icons/star.png'
 
 type Props = {
   image: string
@@ -16,16 +18,16 @@ type Props = {
   title: string
   rate: number
   description: string
-  useLink?: boolean
+  to: string
 }
 
-const Restaurant = ({
+const RestaurantCard = ({
   image,
   infoTags,
   title,
   rate,
   description,
-  useLink
+  to
 }: Props) => (
   <div>
     <Card>
@@ -43,10 +45,10 @@ const Restaurant = ({
           </Rate>
         </RestaurantHeader>
         <RestaurantDescription>{description}</RestaurantDescription>
-        <Tag useLink={useLink}>Saiba mais</Tag>
+        <Link to={to as string}>Saiba mais</Link>
       </RestaurantInfo>
     </Card>
   </div>
 )
 
-export default Restaurant
+export default RestaurantCard

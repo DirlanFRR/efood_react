@@ -4,12 +4,12 @@ import { cores } from '../../styles'
 export const Card = styled.li`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 338px;
   width: 320px;
   background-color: ${cores.vermelhoCoral};
   color: ${cores.ligthYellow};
   padding: 8px;
+  justify-content: space-between;
 
   img {
     width: 100%;
@@ -19,14 +19,12 @@ export const Card = styled.li`
   h2 {
     font-size: 16px;
     font-weight: 900;
-    height: 19px;
   }
 
   p {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    margin-bottom: 8px;
   }
 
   button {
@@ -37,7 +35,5 @@ export const Card = styled.li`
     font-weight: 700;
     padding: 4px 0;
     cursor: pointer;
-    width: 304px;
-    height: 24px;
   }
 `

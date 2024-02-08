@@ -1,10 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  bege: '#FFEBD9',
   vermelhoCoral: '#E66767',
-  brancoAcinzentado: '#FFF8F2',
-  branco: '#FFFFFF',
   ligthYellow: '#FFEBD9'
 }
 
@@ -13,15 +10,16 @@ export const GlobalCss = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
+  }
 
-    body {
-      background-color: ${cores.brancoAcinzentado};
-      color: ${cores.vermelhoCoral};
-    }
-    .container {
-      max-width: 1024px;
-      width: 100%;
-      margin: 0 auto;
-    }
-  }`
+  body {
+    color: ${cores.vermelhoCoral};
+  }
+
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+`
