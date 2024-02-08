@@ -10,7 +10,7 @@ import {
   RestaurantTag
 } from './styles'
 
-import starImg from '../../assets/icons/star.png'
+import starImg from '../../assets/icons/estrela.svg'
 
 type Props = {
   image: string
