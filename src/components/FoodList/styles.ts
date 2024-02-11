@@ -13,6 +13,8 @@ export const Banner = styled.div`
   height: 280px;
   padding-top: 24px;
   padding-bottom: 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 
 export const Title = styled.div`

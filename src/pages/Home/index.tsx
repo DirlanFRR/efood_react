@@ -3,7 +3,7 @@ import RestaurantsList from '../../components/RestaurantsList'
 import restaurant from '../../Model/restaurant'
 
 import sushiRest from '../../assets/images/sushi.svg'
-import pastaRest from '../../assets/images/pasta.svg'
+import pastaRest from '../../assets/images/pasta.png'
 
 const destaque: restaurant[] = [
   {
