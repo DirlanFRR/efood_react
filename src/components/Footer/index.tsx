@@ -2,8 +2,8 @@ import { FooterContainer, FooterMainContainer, Link, Links } from './styles'
 import logo from '../../assets/images/logo.svg'
 
 import insta from '../../assets/icons/instagram-round-svgrepo-com (1) 1.svg'
-import face from '../../assets/icons/facebook-round-svgrepo-com 1.svg'
-import twit from '../../assets/icons/twitter-2-svgrepo-com 1.svg'
+import face from '../../assets/icons/Vector.png'
+import twit from '../../assets/icons/Group.png'
 
 const Footer = () => (
   <FooterMainContainer>

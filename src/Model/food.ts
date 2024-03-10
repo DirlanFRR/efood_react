@@ -1,29 +1,26 @@
-class Restaurant {
+class Food {
   id: number
   image: string
-  infoTags: string[]
   title: string
-  rate: number
   description: string
-  to = '/perfil'
+  details: JSX.Element
+  price: number
 
   constructor(
     id: number,
     image: string,
-    infoTags: string[],
     title: string,
-    rate: number,
     description: string,
-    to: string
+    details: JSX.Element,
+    price: number
   ) {
     this.id = id
     this.image = image
-    this.infoTags = infoTags
     this.title = title
-    this.rate = rate
     this.description = description
-    this.to = to
+    this.details = details
+    this.price = price
   }
 }
 
-export default Restaurant
+export default Food

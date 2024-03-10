@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 
 export const Header = styled.header`
   height: 186px;
@@ -26,4 +26,13 @@ export const HeaderContent = styled.nav`
   & > img {
     justify-self: center;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`
+
+export const CartButton = styled.a`
+  display: flex;
+  justify-self: flex-end;
 `

@@ -1,27 +1,20 @@
-import FoodCard from '../../components/FoodCard'
-import { Banner, ListContainer, Title } from '../../components/FoodList/styles'
+import { ListContainer } from './styles'
 
-import perfilBanner from '../../assets/images/perfilBanner.png'
+import { CardapioItem } from '../../pages/Home'
+import FoodCard from '../FoodCard'
 
-const FoodList = () => (
-  <>
-    <Banner style={{ backgroundImage: `url(${perfilBanner})` }}>
-      <Title className="container">
-        <p>
-          <span>Italiana</span>
-        </p>
-        <h2>La Dolce Vita Trattoria</h2>
-      </Title>
-    </Banner>
+type Props = {
+  items: CardapioItem[]
+}
+
+const FoodList = ({ items }: Props) => {
+  return (
     <ListContainer className="container">
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
-      <FoodCard />
+      {items.map((food) => (
+        <FoodCard item={food} key={food.id} />
+      ))}
     </ListContainer>
-  </>
-)
+  )
+}
 
 export default FoodList

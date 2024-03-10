@@ -1,36 +1,18 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../styles'
 
 export const ListContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 32px;
-  column-gap: 32px;
+  gap: 32px;
   padding-top: 56px;
-`
 
-export const Banner = styled.div`
-  position: relative;
-  height: 280px;
-  padding-top: 24px;
-  padding-bottom: 32px;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
-
-export const Title = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #fff;
-
-  p {
-    font-size: 32px;
-    font-weight: 100;
+  @media (max-width: ${breakpoints.desktop}) {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
   }
 
-  h2 {
-    font-size: 32px;
-    font-weight: 900;
+  @media (max-width: ${breakpoints.tablet}) {
+    grid-template-columns: 1fr;
   }
 `
