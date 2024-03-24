@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const ButtonContainer = styled.button`
   border: none;
-  background-color: ${cores.ligthYellow};
-  color: ${cores.vermelhoCoral};
+  background-color: ${colors.ligthYellow};
+  color: ${colors.vermelhoCoral};
   font-size: 14px;
   font-weight: bold;
   padding: 4px 6px;
+  cursor: pointer;
 `

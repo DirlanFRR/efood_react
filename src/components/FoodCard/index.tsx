@@ -1,26 +1,16 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
-import { ButtonContainer } from '../Button/styles'
+import { add, open } from '../../store/reducers/cart'
+import { parseToBrl } from '../../utils'
 
-import {
-  Action,
-  Card,
-  CardCover,
-  CloseTag,
-  Description,
-  FoodImg,
-  ImageContainer,
-  ImageThumbNail,
-  Modal,
-  ModalContainer
-} from './styles'
-import { CardapioItem } from '../../pages/Home'
 import Button from '../Button'
 
 import zoom from '../../assets/icons/zoom.png'
-import fechar from '../../assets/icons/fechar.png'
-import { useDispatch } from 'react-redux'
-import { add, open } from '../../store/reducers/cart'
+import closeIcon from '../../assets/icons/fechar.png'
+
+import { ButtonContainer } from '../Button/styles'
+import * as S from './styles'
 
 type ModalState = {
   title: string
@@ -29,13 +19,6 @@ type ModalState = {
   details: string
   portion: string
   price: number
-}
-
-export const formataPreco = (preco = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(preco)
 }
 
 type Props = {
@@ -70,16 +53,19 @@ const FoodCard = ({ item }: Props) => {
     })
   }
 
-  const getDescricao = (descricao: string) => {
-    if (descricao.length > 95) {
-      return descricao.slice(0, 95) + '...'
+  const getDescription = (text: string) => {
+    if (text.length > 95) {
+      return text.slice(0, 95) + '...'
     }
   }
 
   return (
     <>
-      <Card key={item.id}>
-        <CardCover
+      <S.Card
+        title={`Clique para mais detalhes do prato: ${item.nome}`}
+        key={item.id}
+      >
+        <S.CardCover
           onClick={() => {
             setModal({
               title: item.nome,
@@ -91,43 +77,43 @@ const FoodCard = ({ item }: Props) => {
             })
           }}
         >
-          <ImageContainer>
+          <S.ImageContainer>
             <div>
-              <ImageThumbNail src={item.foto} alt={`${item.nome}`} />
+              <S.ImageThumbNail src={item.foto} alt={`${item.nome}`} />
             </div>
-            <Action>
+            <S.Action>
               <img src={zoom} alt="Clique aqui para mais detalhes" />
-            </Action>
-          </ImageContainer>
+            </S.Action>
+          </S.ImageContainer>
           <h3>{item.nome}</h3>
-          <p>{getDescricao(item.descricao)}</p>
-        </CardCover>
+          <p>{getDescription(item.descricao)}</p>
+        </S.CardCover>
         <ButtonContainer
           title="clique aqui para adicionar no carrinho"
           onClick={addToCart}
         >
           Adicionar ao carrinho
         </ButtonContainer>
-      </Card>
-      <Modal className={modal.isVisible ? 'visible' : ''}>
-        <ModalContainer className="container">
-          <CloseTag
-            src={fechar}
+      </S.Card>
+      <S.Modal className={modal.isVisible ? 'is-visible' : ''}>
+        <S.ModalContainer className="container">
+          <S.CloseTag
+            src={closeIcon}
             alt="fechar o modal"
-            onClick={() => closeModal()}
+            onClick={closeModal}
           />
-          <FoodImg src={modal.url} alt="imagem da comida" />
-          <Description>
+          <S.FoodImg src={modal.url} alt="imagem da comida" />
+          <S.Description>
             <h4>{modal.title}</h4>
             <p>{modal.details}</p>
             <p>Serve: de {modal.portion}</p>
             <Button title="adicionar ao carrinho" onClick={addToCart}>
-              {`Adicionar ao carrinho - ${formataPreco(modal.price)}`}
+              {`Adicionar ao carrinho - ${parseToBrl(modal.price)}`}
             </Button>
-          </Description>
-        </ModalContainer>
-        <div className="overlay" onClick={() => closeModal()}></div>
-      </Modal>
+          </S.Description>
+        </S.ModalContainer>
+        <div className="overlay" onClick={closeModal}></div>
+      </S.Modal>
     </>
   )
 }

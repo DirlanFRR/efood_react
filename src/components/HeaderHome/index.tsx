@@ -1,13 +1,15 @@
 import logo from '../../assets/images/logo.svg'
-import { Imagem, Titulo } from './styles'
-
 import bannerImg from '../../assets/images/Vector.svg'
 
+import * as S from './styles'
+
 const HeaderHome = () => (
-  <Imagem style={{ backgroundImage: `url(${bannerImg})` }}>
-    <img src={logo} alt="efood logo" />
-    <Titulo>Viva experiências gastronômicas no conforto da sua casa</Titulo>
-  </Imagem>
+  <S.Image style={{ backgroundImage: `url(${bannerImg})` }}>
+    <h1>
+      <img src={logo} alt="EFOOD" />
+    </h1>
+    <S.Title>Viva experiências gastronômicas no conforto da sua casa</S.Title>
+  </S.Image>
 )
 
 export default HeaderHome

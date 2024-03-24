@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const cores = {
+export const colors = {
   vermelhoCoral: '#E66767',
-  ligthYellow: '#FFEBD9'
+  ligthYellow: '#FFEBD9',
+  red: '#FF4D4F'
 }
 
 export const breakpoints = {
@@ -20,7 +21,7 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    color: ${cores.vermelhoCoral};
+    color: ${colors.vermelhoCoral};
   }
 
   .container {

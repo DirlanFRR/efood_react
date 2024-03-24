@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Card = styled.li`
   display: flex;
   flex-direction: column;
   height: 338px;
-  background-color: ${cores.vermelhoCoral};
-  color: ${cores.ligthYellow};
+  background-color: ${colors.vermelhoCoral};
+  color: ${colors.ligthYellow};
   padding: 8px;
   justify-content: space-between;
 
@@ -23,8 +23,8 @@ export const Card = styled.li`
   }
 
   button {
-    background-color: ${cores.ligthYellow};
-    color: ${cores.vermelhoCoral};
+    background-color: ${colors.ligthYellow};
+    color: ${colors.vermelhoCoral};
     border: none;
     font-size: 14px;
     font-weight: 700;
@@ -40,13 +40,13 @@ export const CardCover = styled.div`
 export const ImageContainer = styled.div`
   position: relative;
   margin-bottom: 8px;
+  cursor: zoom-in;
 `
 
 export const ImageThumbNail = styled.img`
   width: 100%;
   height: 167px;
   object-fit: cover;
-  cursor: pointer;
 `
 
 export const Action = styled.div`
@@ -81,7 +81,7 @@ export const Modal = styled.div`
   z-index: 1;
   display: none;
 
-  &.visible {
+  &.is-visible {
     display: flex;
   }
   .overlay {
@@ -95,9 +95,9 @@ export const Modal = styled.div`
 `
 
 export const ModalContainer = styled.div`
-  background-color: ${cores.vermelhoCoral};
+  background-color: ${colors.vermelhoCoral};
   height: 344px;
-  color: ${cores.ligthYellow};
+  color: ${colors.ligthYellow};
   display: flex;
   padding: 32px;
   z-index: 1;
@@ -120,6 +120,7 @@ export const CloseTag = styled.img`
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
 `
 
 export const FoodImg = styled.img`
@@ -149,5 +150,6 @@ export const Description = styled.div`
 
   button {
     margin-top: 16px;
+    width: auto;
   }
 `

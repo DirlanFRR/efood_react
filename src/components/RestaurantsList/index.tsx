@@ -1,6 +1,6 @@
 import RestaurantCard from '../RestaurantCard'
+
 import { ListContainer } from './styles'
-import { Restaurant } from '../../pages/Home'
 
 type Props = {
   restaurants: Restaurant[]
