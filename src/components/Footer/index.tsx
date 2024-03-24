@@ -1,5 +1,5 @@
 import logo from '../../assets/images/logo.svg'
-import insta from '../../assets/icons/instagram-round-svgrepo-com (1) 1.png'
+import insta from '../../assets/icons/instagram-round-svgrepo-com (1) 1.svg'
 import face from '../../assets/icons/Vector.png'
 import twit from '../../assets/icons/Group.png'
 

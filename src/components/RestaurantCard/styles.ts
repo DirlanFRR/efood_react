@@ -5,7 +5,7 @@ import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
-  border: 1px solid ${colors.salmon};
+  border: 1px solid ${colors.vermelhoCoral};
   position: relative;
   height: 100%;
   font-weight: 700;

@@ -6,7 +6,7 @@ import { Container } from './styles'
 
 const Loader = () => (
   <Container>
-    <SyncLoader color={colors.salmon} />
+    <SyncLoader color={colors.vermelhoCoral} />
   </Container>
 )
 
